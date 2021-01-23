@@ -83,3 +83,23 @@ In order to run the models for multiple times, we can use the shell script, repe
 sh repeat.sh 0-0-0,0-0-1,0-0-2,0-0-3,0-0-4
 
 where 0-0-0 is the name of the first run.
+
+## Citation
+```
+@inproceedings{li-etal-2020-multi-instance,
+    title = "Multi-Instance Multi-Label Learning Networks for Aspect-Category Sentiment Analysis",
+    author = "Li, Yuncong  and
+      Yin, Cunxiang  and
+      Zhong, Sheng-hua  and
+      Pan, Xu",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.287",
+    doi = "10.18653/v1/2020.emnlp-main.287",
+    pages = "3550--3560",
+    abstract = "Aspect-category sentiment analysis (ACSA) aims to predict sentiment polarities of sentences with respect to given aspect categories. To detect the sentiment toward a particular aspect category in a sentence, most previous methods first generate an aspect category-specific sentence representation for the aspect category, then predict the sentiment polarity based on the representation. These methods ignore the fact that the sentiment of an aspect category mentioned in a sentence is an aggregation of the sentiments of the words indicating the aspect category in the sentence, which leads to suboptimal performance. In this paper, we propose a Multi-Instance Multi-Label Learning Network for Aspect-Category sentiment analysis (AC-MIMLLN), which treats sentences as bags, words as instances, and the words indicating an aspect category as the key instances of the aspect category. Given a sentence and the aspect categories mentioned in the sentence, AC-MIMLLN first predicts the sentiments of the instances, then finds the key instances for the aspect categories, finally obtains the sentiments of the sentence toward the aspect categories by aggregating the key instance sentiments. Experimental results on three public datasets demonstrate the effectiveness of AC-MIMLLN.",
+}
+```
