@@ -80,13 +80,13 @@ python nlp_tasks/absa/aspect_category_detection_and_sentiment_classification/acd
 ## Run the models for multiple times
 In order to run the models for multiple times, we can use the shell script, repeat.sh, to run the commands mentioned above by replacing the "python" in the commands  with:
 
-sh repeat.sh model_name_0,model_name_1
+sh repeat.sh model_name_0,model_name_1,...
 
-For example, the following commands train five AC-MIMLLN models and evaluate their performances on the Rest14 dataset, respectively.
+For example, the following commands train two AC-MIMLLN models and evaluate their performances on the Rest14 dataset, respectively.
 
-sh repeat.sh 0-0-0,0-0-1,0-0-2,0-0-3,0-0-4 nlp_tasks/absa/aspect_category_detection_and_sentiment_classification/acd_and_sc_bootstrap_pytorch_mil.py  --embedding_filepath glove.840B.300d.txt --data_type mil --current_dataset SemEval-2014-Task-4-REST-DevSplits --mil True --bert False --pair False --joint_type joint --acd_sc_mode multi-multi --lstm_or_fc_after_embedding_layer lstm --lstm_layer_num_in_lstm 3 --batch_size 32 --train True --evaluate False --evaluation_on_instance_level False
+sh repeat.sh 0-0-0,0-0-1 nlp_tasks/absa/aspect_category_detection_and_sentiment_classification/acd_and_sc_bootstrap_pytorch_mil.py  --embedding_filepath glove.840B.300d.txt --data_type mil --current_dataset SemEval-2014-Task-4-REST-DevSplits --mil True --bert False --pair False --joint_type joint --acd_sc_mode multi-multi --lstm_or_fc_after_embedding_layer lstm --lstm_layer_num_in_lstm 3 --batch_size 32 --train True --evaluate False --evaluation_on_instance_level False
 
-sh repeat.sh 0-0-0,0-0-1,0-0-2,0-0-3,0-0-4 nlp_tasks/absa/aspect_category_detection_and_sentiment_classification/acd_and_sc_bootstrap_pytorch_mil.py  --embedding_filepath glove.840B.300d.txt --data_type mil --current_dataset SemEval-2014-Task-4-REST-DevSplits --mil True --bert False --pair False --joint_type joint --acd_sc_mode multi-multi --lstm_or_fc_after_embedding_layer lstm --lstm_layer_num_in_lstm 3 --batch_size 32 --train False --evaluate True --evaluation_on_instance_level False
+sh repeat.sh 0-0-0,0-0-1 nlp_tasks/absa/aspect_category_detection_and_sentiment_classification/acd_and_sc_bootstrap_pytorch_mil.py  --embedding_filepath glove.840B.300d.txt --data_type mil --current_dataset SemEval-2014-Task-4-REST-DevSplits --mil True --bert False --pair False --joint_type joint --acd_sc_mode multi-multi --lstm_or_fc_after_embedding_layer lstm --lstm_layer_num_in_lstm 3 --batch_size 32 --train False --evaluate True --evaluation_on_instance_level False
 
 ## Citation
 ```
